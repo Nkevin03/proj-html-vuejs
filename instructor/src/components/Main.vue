@@ -65,12 +65,17 @@
               </div>
           </div>
       </section>
+      <Courses />
   </main>
 </template>
 
 <script>
+import Courses from '@/components/Courses.vue'
 export default {
     name: 'Main',
+      components: {
+        Courses,
+    },
     data() {
 		return {
 			CardInfo: [
