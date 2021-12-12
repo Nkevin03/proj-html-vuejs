@@ -49,6 +49,22 @@
             </div>
           </div>
       </section>
+
+      <!-- Order book -->
+      <section class="order-book">
+          <div class="book">
+              <div class="left-book">
+                  <h4>Get My exclusive Investing Book just fot $19.50</h4>
+                  <p>Vestibulum imentum eu urna vel cursus. Aenean vehicula quam quam, vitae pellentesque urna elementum cursus.</p>
+                  <div class="image-book">
+                      <img src="@/assets/img/amazon.png" alt="">
+                  </div>
+              </div>
+              <div class="right-book">
+                  <img src="@/assets/img/book.png" alt="">
+              </div>
+          </div>
+      </section>
   </main>
 </template>
 
@@ -223,6 +239,50 @@ export default {
                             }
                         }
                     }
+                }
+            }
+        }
+        .order-book{
+            background-image: url(../assets/img/slider-book.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            .book{
+                display: flex;
+                align-items: center;
+                width: 65%;
+                margin: 0 auto;
+
+                .left-book{
+                    width: 50%;
+                
+                    h4{
+                        font-size: 40px;
+                        font-weight: 700;
+                        padding: 30px 0;
+                        color: $buttercup;
+                        text-align: center;
+                    }
+                    
+                    p{
+                        font-size: 25px;
+                        padding: 10px 0;
+                        text-align: center;
+                        color: $white;
+                        font-weight: 500;
+                        font-style: italic;
+                    }
+                    .image-book{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        padding: 10px 0;
+                    }
+                }
+                .right-book{
+                    padding-top: 40px;
+                    width: 50%;
                 }
             }
         }
