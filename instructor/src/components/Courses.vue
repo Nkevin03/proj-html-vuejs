@@ -5,7 +5,7 @@
             <h3>Why my Courses?</h3>
           </div>
             <div class="card-course col-6 d-flex" v-for="card in CardCourse" :key="`${card.text}`">
-                <div class="prova mx-3 my-3">
+                <div class="border-card mx-3 my-3">
                     <div class="icon">
                         <i :class="card.class"></i>
                     </div>
@@ -58,7 +58,7 @@ export default {
 
         .card-course{
 
-            .prova{
+            .border-card{
                 display: flex;
                 border-left: 4px solid $buttercup;
                 box-shadow: 5px 5px 10px 0px #0000005b;
@@ -68,7 +68,7 @@ export default {
 
                 i{
                     color: $buttercup;
-                    font-size: 40px;
+                    font-size: 50px;
                     padding: 30px 20px;
                 }
             }
@@ -88,6 +88,11 @@ export default {
             
             h4{
                 font-weight: 700;
+            }
+
+            p{
+                color: $firefly;
+                padding: 20px 0;
             }
         }
     }

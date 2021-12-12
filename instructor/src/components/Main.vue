@@ -66,6 +66,47 @@
           </div>
       </section>
       <Courses />
+      <!-- Banner -->
+      <section class="banner">
+          <div class="container col-12 mx-auto d-flex">
+              <div class="info-banner col-3">
+                  <div class="d-flex align-items-center">
+                      <i class="fas fa-user-friends"></i>
+                  </div>
+                  <div class="info-icon">
+                      <h4>3915</h4>
+                      <p>Online Learner</p>
+                  </div>
+              </div>
+              <div class="info-banner col-3">
+                  <div class="d-flex align-items-center">
+                     <i class="fas fa-film"></i>
+                  </div>
+                  <div class="info-icon">
+                      <h4>23</h4>
+                      <p>Video Courses</p>
+                  </div>
+              </div>
+              <div class="info-banner col-3">
+                  <div class="d-flex align-items-center">
+                      <i class="far fa-file-image"></i>
+                  </div>
+                  <div class="info-icon">
+                      <h4>437</h4>
+                      <p>Sliders & Images</p>
+                  </div>
+              </div>
+              <div class="info-banner col-3">
+                  <div class="d-flex align-items-center">
+                      <i class="far fa-thumbs-up"></i>
+                  </div>
+                  <div class="info-icon">
+                      <h4>1440</h4>
+                      <p>Excellent Reviews</p>
+                  </div>
+              </div>
+          </div>
+      </section>
   </main>
 </template>
 
@@ -288,6 +329,36 @@ export default {
                 .right-book{
                     padding-top: 40px;
                     width: 50%;
+                }
+            }
+        }
+        .banner{
+            background-image: url(../assets/img/banner2.jpg);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+
+            .info-banner{
+                display: flex;
+                padding: 150px 0;
+
+                i{
+                    font-size: 45px;
+                    color: $white;
+                    padding-right: 20px;
+                }
+
+                .info-icon{
+
+                    h4{
+                        color: $buttercup;
+                        font-size: 30px;
+                        font-weight: 700;
+                    }
+
+                    p{
+                        color: $white;
+                    }
                 }
             }
         }
