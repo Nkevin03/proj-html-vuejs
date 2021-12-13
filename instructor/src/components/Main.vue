@@ -58,6 +58,13 @@
       <!-- Order book -->
       <section class="order-book">
           <div class="book">
+              <div class="icon-book">
+                  <i class="fas fa-tv"></i>
+                  <i class="far fa-circle"></i>
+                  <i class="fas fa-wrench"></i>
+                  <i class="fas fa-shopping-cart"></i>
+                  <i class="fas fa-mobile-alt"></i>
+              </div>
               <div class="left-book">
                   <h4>Get My exclusive Investing Book just fot $19.50</h4>
                   <p>Vestibulum imentum eu urna vel cursus. Aenean vehicula quam quam, vitae pellentesque urna elementum cursus.</p>
@@ -235,6 +242,10 @@ export default {
                         border-radius: 25px;
                         color: $white;
                         font-weight: 700;
+
+                        &:hover{
+                            background: $fuel-yellow;
+                        }
                     }
                 }
 
@@ -331,6 +342,7 @@ export default {
             background-image: url(../assets/img/slider-book.jpg);
             background-repeat: no-repeat;
             background-position: center;
+            position: relative;
             background-size: cover;
 
             .book{
@@ -338,6 +350,23 @@ export default {
                 align-items: center;
                 width: 65%;
                 margin: 0 auto;
+
+                .icon-book{
+                    position: absolute;
+                    top: 30px;
+                    right: 0;
+                    background: $white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+
+                    i{
+                        font-size: 25px;
+                        padding: 15px 0;
+                    }
+                }
 
                 .left-book{
                     width: 50%;
