@@ -19,27 +19,32 @@
             </div>
           <div class="card-courses">
             <div class="card row col-4" v-for="card in CardInfo" :key="`${card.text}`">
-                <div class="card-img">
-                    <img :src="card.image">
-                </div>
-                <div class="card-content">
-                    <div class="card-text">
-                    <h4>{{card.title}}</h4>
-                    <p>{{card.subTitle}}</p>
-                </div>
-                <div class="line"></div>
-                    <div class="icon">
-                        <div class="info-icon">
-                            <i class="fas fa-signal"></i>
-                            <p>Advanced</p>
+                <div class="border-cards mx-4">
+                    <div class="card-img">
+                        <div class="hover-price">
+                            <p>$59</p>
                         </div>
-                        <div class="info-icon">
-                            <i class="fas fa-list-ul"></i>
-                            <p>8 Lectures</p>
-                        </div>
-                        <div class="info-icon">
-                            <i class="far fa-clock"></i>
-                            <p>6 hours</p>
+                        <img :src="card.image">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-text">
+                        <h4>{{card.title}}</h4>
+                        <p>{{card.subTitle}}</p>
+                    </div>
+                    <div class="line"></div>
+                        <div class="icon">
+                            <div class="info-icon">
+                                <i class="fas fa-signal"></i>
+                                <p>Advanced</p>
+                            </div>
+                            <div class="info-icon">
+                                <i class="fas fa-list-ul"></i>
+                                <p>8 Lectures</p>
+                            </div>
+                            <div class="info-icon">
+                                <i class="far fa-clock"></i>
+                                <p>6 hours</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,7 +72,7 @@
       </section>
       <Courses />
       <!-- Banner -->
-      <section class="banner">
+      <section class="banner row">
           <div class="container col-12 mx-auto d-flex">
               <div class="info-banner col-3">
                   <div class="d-flex align-items-center">
@@ -107,15 +112,18 @@
               </div>
           </div>
       </section>
+      <Slider />
   </main>
 </template>
 
 <script>
 import Courses from '@/components/Courses.vue'
+import Slider from '@/components/Slider.vue'
 export default {
     name: 'Main',
       components: {
         Courses,
+        Slider
     },
     data() {
 		return {
@@ -231,17 +239,48 @@ export default {
                 }
 
                 .card{
-                    margin: 10px 0;
+                    margin-bottom: 30px;
+                    border: none;
+                    background-color: $haze;
+                    display: flex;
+                    align-items: center;
 
-                    .card-img{
-                        width: 100%;
+                    .border-cards{
+                        border: 1px solid $silver;
+                        width: 335px;
+
+                        .card-img{
+                            position: relative;
+                            width: 100%;
+                            cursor: pointer;
+
+                            .hover-price{
+                                position: absolute;
+                                background: rgba(0, 0, 0, 0.452);
+                                height: 100%;
+                                width: 100%;
+                                display: none;
+                                color: $white;
+
+                                p{
+                                    position: absolute;
+                                    top: 45%;
+                                    left: 45%;
+                                    font-size: 30px;
+                                }
+
+                            }
+
+                        &:hover .hover-price{
+                            display: block;
+                        }
 
                         img{
                             width: 100%;
                         }
                     }
+                    }
                     .card-content{
-                        background: $white;
                         padding: 20px;
 
                         h4{
@@ -266,7 +305,7 @@ export default {
 
                     .icon{
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: space-around;
                         padding: 10px 0;
 
                         .info-icon{

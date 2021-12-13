@@ -55,13 +55,27 @@ export default {
 @import '@/styles/preset.scss';
     .course{
         margin: 0 auto;
-
+        padding: 50px 0;
+        
         .card-course{
 
             .border-card{
                 display: flex;
                 border-left: 4px solid $buttercup;
                 box-shadow: 5px 5px 10px 0px #0000005b;
+
+                &:hover{
+                    background: $buttercup;
+                    transition: 0.5s;
+
+                    &:hover i{
+                        color: $white;
+                    }
+
+                    &:hover p{
+                        color: #000;
+                    }
+                }
             }
 
             .icon{
