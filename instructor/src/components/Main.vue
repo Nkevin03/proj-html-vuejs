@@ -379,6 +379,7 @@ export default {
 
             .info-banner{
                 display: flex;
+                justify-content: center;
                 padding: 150px 0;
 
                 i{
